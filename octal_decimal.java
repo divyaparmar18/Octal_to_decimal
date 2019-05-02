@@ -4,7 +4,6 @@ public class octal_decimal {
         Scanner obj = new Scanner(System.in);
         System.out.println("enter a nmber to be converted");
         int octalNumber = obj.nextInt();
-        System.out.println(octalNumber);
         int i=0,decimalNumber=0,lastDigit,exponent=8;
         boolean notDecimal = true;
         while(octalNumber!=0) {
@@ -15,12 +14,19 @@ public class octal_decimal {
                 break;
             }
             else{
-                octalNumber=octalNumber/10;
-                System.out.println(octalNumber);
-
+                octalNumber= getOctalNumber(octalNumber);
+                decimalNumber+=lastDigit * ((int)(Math.pow(exponent,i)));
+                i++;
             }
         }
+        if (notDecimal==true){
+            System.out.println("The decimal number of the number you have given is "+decimalNumber);
+        }
 
+    }
+
+    private static int getOctalNumber(int octalNumber) {
+        return octalNumber / 10;
     }
 
     private static int getLastDigit(int octalNumber) {
