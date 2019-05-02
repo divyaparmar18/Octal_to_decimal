@@ -6,6 +6,9 @@ public class octal_decimal {
         int octalNumber = obj.nextInt();
         System.out.println(octalNumber);
         int i=0,decimalNumber=0,lastDigit,exponent=8;
+        boolean notDecimal = true;
+        while(octalNumber!=0);
+
 
     }
 
