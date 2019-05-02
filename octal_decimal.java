@@ -9,7 +9,16 @@ public class octal_decimal {
         boolean notDecimal = true;
         while(octalNumber!=0) {
             lastDigit = getLastDigit(octalNumber);
-            System.out.println(lastDigit);
+            if(lastDigit > 7) {
+                notDecimal = false;
+                System.out.println("your input is not an octal number");
+                break;
+            }
+            else{
+                octalNumber=octalNumber/10;
+                System.out.println(octalNumber);
+
+            }
         }
 
     }
