@@ -8,10 +8,14 @@ public class octal_decimal {
         int i=0,decimalNumber=0,lastDigit,exponent=8;
         boolean notDecimal = true;
         while(octalNumber!=0) {
-            lastDigit = octalNumber % 10;
+            lastDigit = getLastDigit(octalNumber);
             System.out.println(lastDigit);
         }
 
+    }
+
+    private static int getLastDigit(int octalNumber) {
+        return octalNumber % 10;
     }
 
 
