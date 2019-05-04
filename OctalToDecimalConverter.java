@@ -16,7 +16,7 @@ public class OctalToDecimalConverter {
                 i++;
             }
         }
-        if (notDecimal==true){
+        if (notDecimal){
             System.out.println("The decimal number of the number you have given is "+decimalNumber);
         }
 
