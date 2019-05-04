@@ -11,7 +11,7 @@ public class OctalToDecimalConverter {
                 break;
             }
             else{
-                octalNumber= getQuotient(octalNumber);
+                octalNumber= getOctalNumber(octalNumber);
                 decimalNumber+=lastDigit * ((int)(Math.pow(exponent,i)));
                 i++;
             }
@@ -22,7 +22,7 @@ public class OctalToDecimalConverter {
 
     }
 
-    private static int getQuotient(int octalNumber) {
+    private static int getOctalNumber(int octalNumber) {
         return octalNumber / 10;
     }
 
