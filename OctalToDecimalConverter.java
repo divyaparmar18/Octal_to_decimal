@@ -10,6 +10,7 @@ public class OctalToDecimalConverter {
                 notOctal = false;
                 System.out.println("Not valid, the number is not an octal number");
             } else decimalNumber += lastDigit * ((int) Math.pow(exponent, i));
+            i++;
         }
     }
 }
