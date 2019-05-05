@@ -1,9 +1,12 @@
 public class OctalToDecimalConverter {
     public static void main(String[]args) {
         String octalNumber = args[0];
-        System.out.println(octalNumber);
-    }}
-//        int i=0,decimalNumber=0,lastDigit,exponent=8;
+        String[] number = octalNumber.split("");
+        for(int len = number.length;len>0;len--){
+            System.out.println(number[len-1]);
+
+        }
+        int i=0,decimalNumber=0,exponent=8;
 //        boolean notDecimal = true;
 //        while(octalNumber!=0) {
 //            lastDigit = getLastDigit(octalNumber);
@@ -30,7 +33,7 @@ public class OctalToDecimalConverter {
 //
 //    private static int getLastDigit(int octalNumber) {
 //        return octalNumber % 10;
-//  }
+  }
 //
 //
-//}
+}
