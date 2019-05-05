@@ -10,16 +10,14 @@ public class OctalToDecimalConverter {
         }
         int octalNumber = Integer.parseInt(args[0]);
         int i=0,decimalNumber=0,lastDigit,exponent=8;
-        while(octalNumber!=0) {
-            lastDigit = getLastDigit(octalNumber);
-            octalNumber= getQuotient(octalNumber);
-            decimalNumber+=lastDigit * ((int)(Math.pow(exponent,i)));
+        for( int digit:getDigits(octalNumber)) {
+            decimalNumber+=digit * ((int)(Math.pow(exponent,i)));
             i++;
         }
         System.out.println(decimalNumber);
     }
 
-    private static List getDigits(int Number) {
+    private static List<Integer> getDigits(int Number) {
         List<Integer> listOfint = new ArrayList<Integer>();
         while (Number != 0) {
             int lastDigit = getLastDigit(Number);
