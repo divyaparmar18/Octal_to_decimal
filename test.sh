@@ -1,3 +1,3 @@
 javac OctalToDecimalConverter.java
-java OctalToDecimalConverter 100 > actual
+java OctalToDecimalConverter 10 > actual
 diff actual ExpectedOutput
