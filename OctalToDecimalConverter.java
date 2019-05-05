@@ -13,7 +13,7 @@ public class OctalToDecimalConverter {
             i++;
         }
         if (ifOctal) {
-            System.out.println(decimalNumber);
+            System.out.println("The decimal number of the number you have given is" + decimalNumber);
         }
     }
 }
