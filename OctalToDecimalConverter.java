@@ -1,8 +1,8 @@
 public class OctalToDecimalConverter {
     public static void main(String[]args){
         String Octal = args[0];
-        boolean ifNotoctal = isIfNotoctal(Octal);
-        if(ifNotoctal){
+        boolean isNotoctal = isNotoctal(Octal);
+        if(isNotoctal){
             System.out.println("your input is not an octal number");
             return;
         }
@@ -15,6 +15,14 @@ public class OctalToDecimalConverter {
             i++;
         }
         System.out.println(decimalNumber);
+    }
+
+    private static boolean isNotoctal(String octal) {
+        return IfNotoctal(octal);
+    }
+
+    private static boolean IfNotoctal(String octal) {
+        return isIfNotoctal(octal);
     }
 
     private static boolean isIfNotoctal(String octal) {
