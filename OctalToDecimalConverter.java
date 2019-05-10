@@ -4,17 +4,18 @@ import java.util.List;
 public class OctalToDecimalConverter {
     public static void main(String[]args){
         String Octal = args[0];
+        int lengthOfNum = Octal.length();
         if(isNotoctal(Octal)){
             System.out.println("your input is not an octal number");
             return;
         }
-        int i=0,decimalNumber=0,lastDigit,exponent=8;
-        for( int digit:getDigits(args[0])) {
-            decimalNumber+=digit * ((int)(Math.pow(exponent,i)));
-            i++;
+        int base = 8, decimal = 0;
+        for( Integer digit:getDotProduct(getDigits(Octal),getPowers(base,lengthOfNum))) {
+            decimal += digit;
         }
-        System.out.println(decimalNumber);
+        System.out.println(decimal);
     }
+
 
     private static List<Integer> getDigits(String number) {
         int Number = Integer.parseInt(number);
