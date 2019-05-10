@@ -14,7 +14,6 @@ public class OctalToDecimalConverter {
             i++;
         }
         System.out.println(decimalNumber);
-        System.out.println(getExponent(getDigits(args[0])));
     }
 
     private static List<Integer> getDigits(String number) {
@@ -27,14 +26,13 @@ public class OctalToDecimalConverter {
         }
         return listOfint;
     }
-    private static List<Integer> getExponent(List<Integer> List1) {
-        int exponent = 8;
-        List<Integer> listOfexponent = new ArrayList<Integer>();
-        for (int i = 0; i <List1.size() ; i++) {
-         int expo =((int)(Math.pow(exponent,i)));
-         listOfexponent.add(expo);
+    private static List<Integer> getPowers(int base, int times) {
+        List<Integer> listOfPowers = new ArrayList<Integer>();
+        for (int i = 0; i <times ; i++) {
+         int Power =((int)(Math.pow(base,i)));
+         listOfPowers.add(Power);
         }
-        return listOfexponent;
+        return listOfPowers;
     }
 
     private static boolean isNotoctal(String octal) {
