@@ -35,6 +35,15 @@ public class OctalToDecimalConverter {
         return listOfPowers;
     }
 
+    private static List<Integer>getDotProduct(List<Integer> digitsOfNumber, List<Integer> powersOfEight){
+        List<Integer> listOfDotProduct = new ArrayList<>();
+        for (int i = 0; i <digitsOfNumber.size() ; i++) {
+            int product = digitsOfNumber.get(i) * powersOfEight.get(i);
+            listOfDotProduct.add(product);
+        }
+        return listOfDotProduct;
+    }
+
     private static boolean isNotoctal(String octal) {
         return octal.contains("8") || (octal.contains("9"));
     }
