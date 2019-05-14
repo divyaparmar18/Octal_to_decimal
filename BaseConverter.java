@@ -42,10 +42,12 @@ public class BaseConverter {
     }
 
     private static boolean isNotValid(String number, int base) {
-        for(digits:getDigits(number)){
-
+        for (int digit : getDigits(number)) {
+            if (base < digit) {
+                return true;
+            }
         }
-        return number.contains("8") || (number.contains("9"));
+        return false;
     }
 
 }
