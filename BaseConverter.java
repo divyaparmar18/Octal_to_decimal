@@ -4,13 +4,13 @@ import java.util.List;
 public class BaseConverter {
     public static void main(String[] args) {
         int base = Integer.parseInt(args[1]);
-        String octal = args[2];
-        int lengthOfNum = octal.length();
-        if (isNotValid(octal, base)) {
+        String number = args[2];
+        int lengthOfNum = number.length();
+        if (isNotValid(number, base)) {
             System.out.println("your input is not a valid number");
             return;
         }
-        int decimal = getDotProduct(getDigits(octal), getPowers(base, lengthOfNum));
+        int decimal = getDotProduct(getDigits(number), getPowers(base, lengthOfNum));
         System.out.println(decimal);
     }
 
