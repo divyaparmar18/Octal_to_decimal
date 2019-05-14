@@ -3,14 +3,14 @@ import java.util.List;
 
 public class OctalToDecimalConverter {
     public static void main(String[]args){
-        String Octal = args[0];
-        int lengthOfNum = Octal.length();
-        if(isNotoctal(Octal)){
+        String octal = args[0];
+        int lengthOfNum = octal.length();
+        if(isNotoctal(octal)){
             System.out.println("your input is not an octal number");
             return;
         }
         int base = 8;
-        int decimal = getDotProduct(getDigits(Octal),getPowers(base,lengthOfNum));
+        int decimal = getDotProduct(getDigits(octal),getPowers(base,lengthOfNum));
         System.out.println(decimal);
     }
 
