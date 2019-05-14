@@ -7,7 +7,7 @@ public class BaseConverter {
         String octal = args[2];
         int lengthOfNum = octal.length();
         if (isNotValid(octal, base)) {
-            System.out.println("your input is not an octal number");
+            System.out.println("your input is not a valid number");
             return;
         }
         int decimal = getDotProduct(getDigits(octal), getPowers(base, lengthOfNum));
@@ -43,7 +43,7 @@ public class BaseConverter {
 
     private static boolean isNotValid(String number, int base) {
         for (int digit : getDigits(number)) {
-            if (base < digit) {
+            if (base <= digit) {
                 return true;
             }
         }
