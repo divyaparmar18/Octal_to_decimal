@@ -10,19 +10,10 @@ public class BaseConverter {
             System.out.println("your input is not a valid number");
             return;
         }
-        int decimal = getDotProduct(SplitNumber.getDigits(number), getPowers(base, lengthOfNum));
+        int decimal = getDotProduct(SplitNumber.getDigits(number), PowersOfNumber.getPowers(base, lengthOfNum));
         System.out.println(decimal);
     }
 
-
-    private static List<Integer> getPowers(int base, int times) {
-        List<Integer> listOfPowers = new ArrayList<Integer>();
-        for (int i = 0; i < times; i++) {
-            int Power = ((int) (Math.pow(base, i)));
-            listOfPowers.add(Power);
-        }
-        return listOfPowers;
-    }
 
     private static int getDotProduct(List<Integer> digitsOfNumber, List<Integer> powersOfEight) {
         int product = 0;
