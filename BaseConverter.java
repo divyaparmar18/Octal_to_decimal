@@ -10,19 +10,10 @@ public class BaseConverter {
             System.out.println("your input is not a valid number");
             return;
         }
-        int decimal = getDotProduct(getDigits(number), getPowers(base, lengthOfNum));
+        int decimal = getDotProduct(SplitNumber.getDigits(number), getPowers(base, lengthOfNum));
         System.out.println(decimal);
     }
 
-
-    private static List<Integer> getDigits(String number) {
-        String[] NumOfString = number.split("");
-        List<Integer> splitOfDigits = new ArrayList<>();
-        for (int i = NumOfString.length; i > 0; i--) {
-            splitOfDigits.add(Integer.valueOf(NumOfString[i - 1]));
-        }
-        return (splitOfDigits);
-    }
 
     private static List<Integer> getPowers(int base, int times) {
         List<Integer> listOfPowers = new ArrayList<Integer>();
@@ -42,7 +33,7 @@ public class BaseConverter {
     }
 
     private static boolean isNotValid(String number, int base) {
-        for (int digit : getDigits(number)) {
+        for (int digit : SplitNumber.getDigits(number)) {
             if (base <= digit) {
                 return true;
             }
