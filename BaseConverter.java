@@ -3,13 +3,13 @@ import java.util.List;
 
 public class BaseConverter {
     public static void main(String[] args) {
+        int base = Integer.parseInt(args[1]);
         String octal = args[2];
         int lengthOfNum = octal.length();
-        if (isNotValid(octal)) {
+        if (isNotValid(octal, base)) {
             System.out.println("your input is not an octal number");
             return;
         }
-        int base = Integer.parseInt(args[1]);
         int decimal = getDotProduct(getDigits(octal), getPowers(base, lengthOfNum));
         System.out.println(decimal);
     }
@@ -41,7 +41,7 @@ public class BaseConverter {
         return product;
     }
 
-    private static boolean isNotValid(String octal) {
+    private static boolean isNotValid(String octal , int base) {
         return octal.contains("8") || (octal.contains("9"));
     }
 
