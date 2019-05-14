@@ -7,6 +7,8 @@ java BaseConverter --base 6 120 > actual
 diff actual Expectfor6
 java BaseConverter --base 5 134 > actual
 diff actual Expectfor5
+java BaseConverter --base 2 45 > actual
+diff actual ExpectInvalid
 
 
 
