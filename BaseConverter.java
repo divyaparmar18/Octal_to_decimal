@@ -41,8 +41,11 @@ public class BaseConverter {
         return product;
     }
 
-    private static boolean isNotValid(String octal , int base) {
-        return octal.contains("8") || (octal.contains("9"));
+    private static boolean isNotValid(String number, int base) {
+        for(digits:getDigits(number)){
+
+        }
+        return number.contains("8") || (number.contains("9"));
     }
 
 }
