@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class OctalToDecimalConverter {
+public class BaseConverter {
     public static void main(String[]args){
         String octal = args[2];
         int lengthOfNum = octal.length();
