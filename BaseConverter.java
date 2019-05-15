@@ -3,7 +3,6 @@ import com.divya.converter.ParseResult;
 import static com.divya.converter.DotProductCalculator.getDotProduct;
 import static com.divya.converter.PowersOfNumber.getPowers;
 import static com.divya.converter.SplitNumber.getDigits;
-import static java.lang.Integer.parseInt;
 
 public class BaseConverter {
      public static void main(String[] args) {

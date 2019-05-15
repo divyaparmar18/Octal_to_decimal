@@ -9,8 +9,5 @@ java BaseConverter --base 5 134 > actual
 diff actual ExpectFor134InBase5
 java BaseConverter --base 2 45 > actual
 diff actual ExpectInvalidFor45InBase2
-
-
-
-
-
+java BaseConverter 24 > actual
+diff actual DefaultBaseFor24
