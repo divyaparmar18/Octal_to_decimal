@@ -1,4 +1,4 @@
-import com.divya.converter.DotProductCalculator;
+import com.divya.converter.ParseResult;
 
 import static com.divya.converter.DotProductCalculator.getDotProduct;
 import static com.divya.converter.PowersOfNumber.getPowers;
@@ -6,9 +6,10 @@ import static com.divya.converter.SplitNumber.getDigits;
 import static java.lang.Integer.parseInt;
 
 public class BaseConverter {
-    public static void main(String[] args) {
-        int base = parseInt(args[1]);
-        String number = args[2];
+     public static void main(String[] args) {
+        ParseResult parsing = new ParseResult(args);
+        int base = parsing.fromBase;
+        String number = parsing.number;
         int lengthOfNum = number.length();
         if (isNotValid(number, base)) {
             System.out.println("your input is not a valid number");
