@@ -1,4 +1,4 @@
-package com.divya.converter;
+package main.java.converter;
 
 import java.util.ArrayList;
 import java.util.List;

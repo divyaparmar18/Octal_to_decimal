@@ -1,4 +1,4 @@
-package com.divya.converter;
+package main.java.converter;
 
 public class ParseResult{
     public int fromBase ;

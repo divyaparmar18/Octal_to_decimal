@@ -1,11 +1,7 @@
-import com.divya.converter.ParseResult;
+import main.java.converter;
 
 import java.util.List;
 
-import static com.divya.converter.DotProductCalculator.getProduct;
-import static com.divya.converter.PowersOfNumber.getPowers;
-import static com.divya.converter.SplitNumber.getDigits;
-import static com.divya.converter.SumOfList.getTotal;
 
 public class BaseConverter {
      public static void main(String[] args) {
@@ -18,6 +14,7 @@ public class BaseConverter {
             return;
         }
         List<Integer> productsOfElements = getProduct(getDigits(number), getPowers(base, lengthOfNum));
+
          System.out.println(getTotal(productsOfElements));
     }
 
