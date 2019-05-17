@@ -1,8 +1,11 @@
 import com.divya.converter.ParseResult;
 
-import static com.divya.converter.DotProductCalculator.getDotProduct;
+import java.util.List;
+
+import static com.divya.converter.DotProductCalculator.getProduct;
 import static com.divya.converter.PowersOfNumber.getPowers;
 import static com.divya.converter.SplitNumber.getDigits;
+import static com.divya.converter.SumOfList.getTotal;
 
 public class BaseConverter {
      public static void main(String[] args) {
@@ -14,8 +17,8 @@ public class BaseConverter {
             System.out.println("your input is not a valid number");
             return;
         }
-        int decimal = getDotProduct(getDigits(number), getPowers(base, lengthOfNum));
-        System.out.println(decimal);
+        List<Integer> productsOfElements = getProduct(getDigits(number), getPowers(base, lengthOfNum));
+         System.out.println(getTotal(productsOfElements));
     }
 
     private static boolean isNotValid(String number, int base) {
@@ -26,4 +29,5 @@ public class BaseConverter {
         }
         return false;
     }
+
 }
